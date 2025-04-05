@@ -1,0 +1,1 @@
+alert('color-picker.js 起動');
