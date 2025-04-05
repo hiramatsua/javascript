@@ -1,15 +1,19 @@
 /*
     for color-picker jsファイル
 */
-const colorPic = document.querySelector('#colorPicker');
+const body = document.querySelector('body');
+const colorCode = document.querySelector('#colorCode');
 const colorText = document.querySelector('#colorText');
 
 alert('color-picker.js 起動');
 
 function colorBg () {
+    var colorCodeVal = colorCode.value;
     // テキスト内容を書き換え
-    colorText.textContent = 'カラーコード：' + colorPic.value;
+    colorText.textContent = 'カラーコード：' + colorCodeVal;
+    // 選択された色で背景色を変更する
+    body.style.backgroundColor = colorCodeVal;
 }
 
-// カラーピッカーが変更されたら、function colorBg() 実行
-colorPic.addEventListener('input', colorBg);
+// カラーコードが変更されたら、関数 colorBg() を実行する
+colorCode.addEventListener('input', colorBg);
