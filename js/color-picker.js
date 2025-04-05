@@ -9,10 +9,17 @@ alert('color-picker.js 起動');
 
 function colorBg () {
     var colorCodeVal = colorCode.value;
-    // テキスト内容を書き換え
-    colorText.textContent = 'カラーコード：' + colorCodeVal;
+    
     // 選択された色で背景色を変更する
     body.style.backgroundColor = colorCodeVal;
+    // テキスト内容を書き換え    
+    if (colorCodeVal == '#ffffff') {
+        colorText.textContent = 'カラーコード：' + colorCodeVal + '(White)';
+    } else if (colorCodeVal == '#000000') {
+        colorText.textContent = 'カラーコード：' + colorCodeVal + '(Black)';
+    } else {
+        colorText.textContent = 'カラーコード：' + colorCodeVal;
+    }
 }
 
 // カラーコードが変更されたら、関数 colorBg() を実行する
