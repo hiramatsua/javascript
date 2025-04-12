@@ -25,3 +25,13 @@ body {
 .alert {
     color: #f66;
 }
+
+#clearBtn {
+    background-color: #0bd;
+    padding: 0.5rem;
+    font-size: medium;
+    color: #fff;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+}

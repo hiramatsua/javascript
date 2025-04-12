@@ -3,8 +3,9 @@
 */
 const inputText = document.querySelector('#input_text');
 const count = document.querySelector('#count');
+const clearBtn = document.querySelector('#clearBtn');
 
-// console.log('- count-of-number js -');
+// console.log(clearBtn);
 
 function countNumber () {
 
@@ -18,6 +19,15 @@ function countNumber () {
     }
 }
 
+function inputTextClear () {
+    
+    inputText.value = '';
+    count.classList.remove('alert');
+    count.textContent = '0';
+}
+
 // キー入力されたら、関数 countNumber を実行する
 inputText.addEventListener('keyup', countNumber);
 
+// クリアボタンがクリックされたら、入力された文字をクリアする
+clearBtn.addEventListener('click', inputTextClear);
